@@ -2,11 +2,17 @@
 import os 
 
 def solution(s):
-    result = []
+    result = set()
     for i in range(len(s)):
-
-        return result
+        for j in range(i+1, len(s)):
+            result.add(s[i] + s[j])
+    return sorted(result)
 
 if __name__ == "__main__":
-    s = input()
+    s = eval(input())
+    print(solution(s))
+
+
+if __name__ == "__main__":
+    s = eval(input())
     print(solution(s))
