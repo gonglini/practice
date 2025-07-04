@@ -1,20 +1,20 @@
 #가장 가까운 같은 글자
 import os 
 
-def solution(s):
-    result = []
-    for i in range(len(s)):
-        found = False
-        for j in range(i - 1, -1, -1):  
-            if s[i] == s[j]:
-                result.append(i - j)
-                found = True
-                break
-        if not found:
-            result.append(-1)
+def solution(s, n):
+    result = ''
+    for c in s:
+        if c == ' ':
+            result += ' '
+        elif c.isupper():
+            result += chr((ord(c) - ord('A') + n) % 26 + ord('A'))
+        elif c.islower():
+            result += chr((ord(c) - ord('a') + n) % 26 + ord('a'))
     return result
+
 
 if __name__ == "__main__":
     s = input()
-    print(solution(s))
+    n = int(input())
+    print(solution(s, n))
 
