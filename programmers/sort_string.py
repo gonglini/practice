@@ -15,5 +15,5 @@ def solution(strings, n):
 if __name__ == "__main__":
     strings = eval(input())
     n = int(input())
-    print(solution(s,n))
+    print(solution(strings,n))
 
