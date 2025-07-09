@@ -13,6 +13,3 @@ if __name__ == "__main__":
     print(solution(s))
 
 
-if __name__ == "__main__":
-    s = eval(input())
-    print(solution(s))
